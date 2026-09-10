@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bakr Eldeeb — Full Stack Developer portfolio." />
+  <meta name="theme-color" content="#0b0d0c" />
+  <title>Bakr Eldeeb — Full Stack Developer</title>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('bakr-theme');
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = saved || (systemDark ? 'dark' : 'light');
+      const lang = localStorage.getItem('bakr-lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="boot-screen" id="bootScreen" aria-hidden="true">
+    <div class="boot-terminal">
+      <span class="boot-line">&gt; portfolio:init</span>
+      <span class="boot-line boot-line-2">&gt; loading interface...</span>
+      <span class="boot-ready">ready<span class="cursor">_</span></span>
+      <span class="boot-bar"><i></i></span>
+    </div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Bakr Eldeeb home">
+        
+        <span class="brand-text">Bakr Eldeeb</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="langToggle" type="button" aria-label="Switch language">AR</button>
+        <button class="icon-btn theme-btn" id="themeToggle" type="button" aria-label="Switch theme">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+        <a class="talk-btn" href="https://wa.me/201108655200?text=Hi%20Bakr%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noreferrer" data-i18n="nav.talk">Let's Talk</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="terminal-bg" aria-hidden="true">
+        <div class="terminal-line">bakr@portfolio:~$ whoami</div>
+        <div class="terminal-line">Bakr Eldeeb</div>
+        <div class="terminal-line">bakr@portfolio:~$ stack</div>
+        <div class="terminal-line">Angular · C# · .NET · Supabase · SQL</div>
+        <div class="terminal-line">bakr@portfolio:~$ status</div>
+        <div class="terminal-line">available_for_opportunities</div>
+        <div class="terminal-line">&gt; loading projects...</div>
+        <div class="terminal-line">&gt; environment ready.</div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.hello">HELLO, I'M</span></div>
+          <h1>Bakr Eldeeb</h1>
+          <h2 data-i18n="hero.role">Full Stack Developer</h2>
+          <p class="hero-lead" data-i18n="hero.lead">I build practical web applications, from clean user interfaces to full-stack systems.</p>
+
+          <div class="hero-actions">
+            <a class="primary-btn" href="#work"><span data-i18n="hero.viewWork">View My Work</span><span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="https://github.com/Bakr-Eldeeb" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="text-link" href="https://www.linkedin.com/in/bakr-eldeeb" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a class="text-link" href="https://wa.me/201108655200?text=Hi%20Bakr%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noreferrer">WhatsApp ↗</a>
+          </div>
+
+          <div class="hero-meta">
+            <div><span data-i18n="hero.based">Based in</span><strong data-i18n="hero.location">Heliopolis, Cairo</strong></div>
+            <div><span data-i18n="hero.availableFor">Available for</span><strong data-i18n="hero.opportunities">Opportunities</strong></div>
+            <div><span data-i18n="hero.email">Email</span><strong><a href="mailto:bakr.ma7moud.777@gmail.com">bakr.ma7moud.777@gmail.com</a></strong></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="portrait-shell">
+            <div class="portrait-badge portrait-badge-top">FULL STACK</div>
+            <img src="assets/bakr-photo.jpeg" alt="Portrait of Bakr Eldeeb" />
+            <div class="portrait-footer">
+              <span>Angular</span><span>.NET</span><span>Supabase</span>
+            </div>
+            <div class="portrait-badge portrait-badge-bottom">Cairo / EG</div>
+          </div>
+
+          <div class="terminal-card" aria-label="Developer terminal summary">
+            <div class="terminal-head"><span></span><span></span><span></span><em>portfolio.sh</em></div>
+            <div class="terminal-body">
+              <p><b>$</b> whoami</p><p class="terminal-output">Bakr Eldeeb</p>
+              <p><b>$</b> role</p><p class="terminal-output">Full Stack Developer</p>
+              <p><b>$</b> status</p><p class="terminal-output green">available<span class="cursor">_</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container split-head reveal">
+        <div>
+          <div class="section-kicker" data-i18n="about.kicker">ABOUT ME</div>
+          <h2 data-i18n="about.title">Building useful products, one problem at a time.</h2>
+        </div>
+        <div class="about-copy">
+          <p data-i18n="about.p1">I'm a Full Stack Developer focused on building practical, maintainable and user-friendly web applications.</p>
+          <p data-i18n="about.p2">My work covers frontend development using Angular and JavaScript, backend development using C# and .NET, and database-driven applications with SQL, Supabase and Firebase.</p>
+        </div>
+      </div>
+
+      <div class="container capability-strip reveal delay-1">
+        <div><span>01</span><strong data-i18n="about.frontend">Frontend</strong><p>Angular / JavaScript</p></div>
+        <div><span>02</span><strong data-i18n="about.backend">Backend</strong><p>C# / .NET</p></div>
+        <div><span>03</span><strong data-i18n="about.data">Data</strong><p>SQL / Supabase</p></div>
+        <div><span>04</span><strong data-i18n="about.focus">Focus</strong><p data-i18n="about.focusValue">Full Stack Development</p></div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="container experience-grid reveal">
+        <div class="experience-intro">
+          <div class="section-kicker" data-i18n="experience.kicker">EXPERIENCE</div>
+          <h2 data-i18n="experience.title">Real-world experience, built into the way I work.</h2>
+        </div>
+        <article class="experience-panel">
+          <div class="experience-topline">
+            <span class="experience-company">UIS</span>
+            <span class="experience-duration" data-i18n="experience.duration">1 YEAR</span>
+          </div>
+          <div class="experience-main">
+            <span class="experience-label" data-i18n="experience.label">Professional Experience</span>
+            <p data-i18n="experience.text">One year of professional experience at UIS, bringing my development skills into a real work environment.</p>
+          </div>
+          <div class="experience-tags" aria-label="Experience focus">
+            <span data-i18n="experience.tag1">Development</span><span data-i18n="experience.tag2">Problem Solving</span><span data-i18n="experience.tag3">Team Workflow</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="container section-title reveal">
+        <div class="section-kicker" data-i18n="skills.kicker">MY SKILLS</div>
+        <h2 data-i18n="skills.title">Tools & technologies I work with.</h2>
+      </div>
+      <div class="container skills-grid reveal delay-1">
+        <article class="skill-group">
+          <span>01</span><h3 data-i18n="skills.frontend">Frontend</h3>
+          <ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Angular</li></ul>
+        </article>
+        <article class="skill-group">
+          <span>02</span><h3 data-i18n="skills.backend">Backend & Programming</h3>
+          <ul><li>C#</li><li>OOP</li><li>.NET Framework</li></ul>
+        </article>
+        <article class="skill-group">
+          <span>03</span><h3 data-i18n="skills.data">Databases & Services</h3>
+          <ul><li>SQL</li><li>MySQL</li><li>Supabase</li><li>Firebase</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="container work-head reveal">
+        <div>
+          <div class="section-kicker" data-i18n="work.kicker">SELECTED WORK</div>
+          <h2 data-i18n="work.title">Projects I've built.</h2>
+        </div>
+        <p data-i18n="work.note">Use the arrows or your keyboard to turn the project pages.</p>
+      </div>
+
+      <div class="container book-stage reveal delay-1" id="bookStage">
+        <div class="book" id="projectBook">
+          <div class="book-page book-left">
+            <div class="book-topline">
+              <span class="project-index" id="projectIndex">01 / 03</span>
+              <span class="project-category" id="projectCategory">Gym Management SaaS</span>
+            </div>
+            <div class="book-content">
+              <div>
+                <h3 id="projectTitle">Gymvance</h3>
+                <p class="project-role" id="projectRole">Full Stack Developer</p>
+                <p class="project-description" id="projectDescription">A full-stack gym management platform designed to simplify membership management, attendance tracking, payments, subscriptions, branches and daily gym operations.</p>
+              </div>
+              <div class="project-tech" id="projectTech"></div>
+              <div class="project-links">
+                <a class="project-link" id="projectLive" target="_blank" rel="noreferrer"><span data-i18n="work.live">Live Project</span> ↗</a>
+                <a class="project-link" id="projectCode" target="_blank" rel="noreferrer"><span data-i18n="work.code">View Code</span> ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-spine" aria-hidden="true"></div>
+
+          <div class="book-page book-right">
+            <div class="screen-frame" id="screenFrame">
+              <img id="projectImage" src="assets/gymvance-1.png" alt="Gymvance screenshot" />
+              <div class="screen-controls">
+                <button id="prevScreen" type="button" aria-label="Previous project screenshot">←</button>
+                <span id="screenCounter">1 / 6</span>
+                <button id="nextScreen" type="button" aria-label="Next project screenshot">→</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="turn-sheet" id="turnSheet" aria-hidden="true">
+            <div class="turn-face turn-front" id="turnFront"></div>
+            <div class="turn-face turn-back" id="turnBack"></div>
+          </div>
+        </div>
+
+        <div class="book-controls">
+          <button id="prevProject" type="button"><span aria-hidden="true">←</span><span data-i18n="work.prev">Previous</span></button>
+          <div class="project-dots" id="projectDots" aria-label="Project selector"></div>
+          <button id="nextProject" type="button"><span data-i18n="work.next">Next</span><span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-grid reveal">
+        <div class="contact-copy">
+          <div class="section-kicker" data-i18n="contact.kicker">CONTACT</div>
+          <h2 data-i18n="contact.title">Let's build something useful.</h2>
+          <p data-i18n="contact.text">Have an opportunity, idea or project? Feel free to reach out.</p>
+          <div class="contact-list">
+            <a href="mailto:bakr.ma7moud.777@gmail.com"><span>Email</span><strong>bakr.ma7moud.777@gmail.com</strong></a>
+            <a href="tel:+201108655200"><span data-i18n="contact.phone">Phone</span><strong>+20 110 865 5200</strong></a>
+            <a href="https://www.linkedin.com/in/bakr-eldeeb" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/bakr-eldeeb ↗</strong></a>
+            <a href="https://github.com/Bakr-Eldeeb" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/Bakr-Eldeeb ↗</strong></a>
+            <a href="https://wa.me/201108655200?text=Hi%20Bakr%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noreferrer"><span>WhatsApp</span><strong data-i18n="contact.whatsappCta">Chat on WhatsApp ↗</strong></a>
+            <div><span data-i18n="contact.location">Location</span><strong data-i18n="contact.locationValue">Heliopolis, Cairo, Egypt</strong></div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label><span data-i18n="form.name">Name</span><input type="text" name="name" required /></label>
+          <label><span data-i18n="form.email">Email</span><input type="email" name="email" required /></label>
+          <label><span data-i18n="form.subject">Subject</span><input type="text" name="subject" required /></label>
+          <label><span data-i18n="form.message">Message</span><textarea name="message" rows="6" required></textarea></label>
+          <button class="primary-btn" type="submit"><span data-i18n="form.send">Send Message</span><span aria-hidden="true">↗</span></button>
+          <small data-i18n="form.note">This opens your email app — no data is stored.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Bakr Eldeeb</strong><span data-i18n="footer.role">Full Stack Developer</span></div>
+      <div><span>© 2026 Bakr Eldeeb</span></div>
+      <div><a href="https://github.com/Bakr-Eldeeb" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/bakr-eldeeb" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
